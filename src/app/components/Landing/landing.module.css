@@ -1,0 +1,36 @@
+.box {
+ background: linear-gradient(#000, #20ff00);
+ height: 600px;
+ display: flex;
+ justify-content: space-around;
+ align-items: center;
+}
+
+.landing {
+ height: 400px;
+ display: flex;
+ flex-direction: column;
+ justify-content: space-between;
+}
+
+.title {
+ font-size: 4.5rem;
+ font-weight: 700;
+}
+
+.landing > div > p {
+ font-size: 1.5rem;
+}
+
+.description {
+ width: 80%;
+}
+
+.desc_icons {
+ display: flex;
+ align-items: center;
+}
+
+.desc_icons > img {
+ padding: 0 1%;
+}
