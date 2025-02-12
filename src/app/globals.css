@@ -7,3 +7,9 @@ p,
 h1 {
  color: white;
 }
+
+.title {
+ text-align: left;
+ font-size: 2.5rem;
+ padding: 3% 0;
+}

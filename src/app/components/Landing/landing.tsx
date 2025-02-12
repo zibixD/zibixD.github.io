@@ -9,7 +9,7 @@ const Landing = () => {
    <Box className={styles.landing}>
     <Box>
      <Typography>Cześć, z tej strony</Typography>
-     <Typography variant="h1" className={styles.title}>
+     <Typography variant="h1" className={styles.name}>
       Adrian!
      </Typography>
      <Typography>Początkujący programista na Froncie</Typography>
@@ -22,10 +22,10 @@ const Landing = () => {
      <Typography className={styles.desc_icons}>
       Do pisania aplikacji głównie używam
       <Image
-       src="/react-logo2.png"
+       src="/react-logo.png"
        alt="logo ReactJs"
-       width={90}
-       height={50}
+       width={120}
+       height={60}
       />{" "}
       oraz
       <Image

@@ -1,0 +1,19 @@
+.box {
+ height: 300px;
+ background: linear-gradient(#20ff00, #000);
+ display: flex;
+ flex-direction: column;
+ align-items: center;
+}
+
+.logos_box {
+ display: flex;
+ justify-content: center;
+ width: 100%;
+ height: 150px;
+}
+
+.logos_box > img {
+ margin: 0 3%;
+ /* box-shadow: inset 0px 0px 36px 0px rgba(0, 0, 0, 1); */
+}
