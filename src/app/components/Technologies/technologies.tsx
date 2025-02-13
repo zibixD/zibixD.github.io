@@ -21,6 +21,7 @@ const Technologies = () => {
     <Image src="/typescript.svg" alt="logo TypeScript" width={80} height={80} />
     <Image src="/react-2.svg" alt="logo ReactJS" width={80} height={80} />
     <Image src="/redux.svg" alt="logo Redux" width={80} height={80} />
+    <Image src="/axios.svg" alt="logo Axios" width={120} height={120} />
     <Image src="/next-js.svg" alt="logo Next" width={80} height={80} />
     <Image src="/material-ui.svg" alt="logo Next" width={80} height={80} />
    </Box>
