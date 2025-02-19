@@ -1,0 +1,24 @@
+.box {
+ /* background-color: #20ff00; */
+}
+
+.box_projects {
+ display: flex;
+ justify-content: space-evenly;
+}
+
+.project {
+ background-color: rgb(13, 138, 13);
+ width: 30%;
+ text-align: center;
+}
+
+.project > img {
+ width: 100%;
+ padding-bottom: 3%;
+}
+
+.project > div {
+ display: flex;
+ justify-content: center;
+}

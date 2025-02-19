@@ -1,11 +1,12 @@
 .menu {
- background-color: black;
+ /* background-color: black; */
  color: #1ec904;
  display: flex;
  justify-content: center;
  align-items: center;
  height: 100px;
  font-size: 1.8rem;
+ opacity: 10;
 }
 
 .links {

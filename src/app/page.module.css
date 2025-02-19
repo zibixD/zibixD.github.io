@@ -1,0 +1,79 @@
+:root {
+ --shadows-small: 0px 0px white;
+ --shadows-medium: 0px 0px white;
+ --shadows-big: 0px 0px white;
+}
+
+.stars,
+.stars2,
+.stars3 {
+ position: absolute;
+ width: 1px;
+ height: 1px;
+ background: red !important;
+ animation: animStar linear infinite;
+}
+
+.stars {
+ box-shadow: var(--shadows-small);
+ animation-duration: 50s;
+}
+
+.stars::after {
+ content: " ";
+ position: absolute;
+ left: 0;
+ top: 2000px;
+ width: 1px;
+ height: 1px;
+ background: transparent;
+ box-shadow: var(--shadows-small);
+}
+
+.stars2 {
+ width: 2px;
+ height: 2px;
+ box-shadow: var(--shadows-medium);
+ animation-duration: 100s;
+}
+
+.stars2::after {
+ content: " ";
+ position: absolute;
+ left: 0;
+ top: 2000px;
+ width: 2px;
+ height: 2px;
+ background: transparent;
+ box-shadow: var(--shadows-medium);
+}
+
+.stars3 {
+ width: 3px;
+ height: 3px;
+ box-shadow: var(--shadows-big);
+ animation-duration: 150s;
+}
+
+.stars3::after,
+.stars2::after,
+.stars::after {
+ content: " ";
+ position: absolute;
+ left: 0;
+ top: 2000px;
+ width: inherit;
+ height: inherit;
+ background: transparent;
+ box-shadow: inherit;
+}
+
+@keyframes animStar {
+ from {
+  transform: translateY(0px);
+ }
+ to {
+  transform: translateY(-1500px);
+  opacity: 0.5;
+ }
+}

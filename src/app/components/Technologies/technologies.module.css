@@ -1,6 +1,7 @@
 .box {
  height: 300px;
- background: linear-gradient(#20ff00, #000);
+ /* background-color: #20ff00; */
+ /* background: linear-gradient(#20ff00, #000); */
  display: flex;
  flex-direction: column;
  align-items: center;

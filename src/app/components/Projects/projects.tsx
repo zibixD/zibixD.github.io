@@ -1,9 +1,58 @@
-import { Box, Typography } from "@mui/material";
+import { Box, Typography, Button } from "@mui/material";
+import Image from "next/image";
+
+import styles from "./projects.module.css";
 
 const Projects = () => {
  return (
-  <Box>
+  <Box className={styles.box}>
    <Typography className="title">Moje zrealizowane projekty</Typography>
+   <Box className={styles.box_projects}>
+    <Box className={styles.project}>
+     <Image
+      src="/plasek-site.jpg"
+      alt="Strona plasek.pl"
+      width={400}
+      height={230}
+     />
+     <Typography>
+      Moja pierwsza oficjalna strona wrzucona do webu. Utworzona na zlecenie
+      Biura Rachunkowego.
+     </Typography>
+     <Box>
+      <Image src="/react-2.svg" alt="ikona ReactJS" width={50} height={50} />
+      <Image
+       src="/material-ui.svg"
+       alt="ikona Material UI"
+       width={50}
+       height={50}
+      />
+      <Button>Sprawdź śmiało!</Button>
+     </Box>
+    </Box>
+    <Box className={styles.project}>
+     <Image
+      src="/duraumat-site.jpg"
+      alt="Strona duraumat.eu"
+      width={400}
+      height={230}
+     />
+     <Typography>
+      Moja pierwsza strona komercyjna. Utworzyłem ją na zlecenie firmy Duraumat,
+      która zajmuję się serwisem i wyposażaniem sprzętu rolniczego.
+     </Typography>
+     <Box>
+      <Image src="/next-js.svg" alt="ikona NextJS" width={50} height={50} />
+      <Image
+       src="/material-ui.svg"
+       alt="ikona Material UI"
+       width={50}
+       height={50}
+      />
+      <Button>Sprawdź śmiało!</Button>
+     </Box>
+    </Box>
+   </Box>
   </Box>
  );
 };

@@ -1,9 +1,11 @@
 .box {
- background: linear-gradient(#000, #20ff00);
+ /* background: linear-gradient(#000, #20ff00); */
  height: 600px;
  display: flex;
  justify-content: space-around;
  align-items: center;
+ opacity: 2;
+ z-index: 1;
 }
 
 .landing {
