@@ -1,6 +1,9 @@
-#stars,
+/* #stars,
+#stars-duplicate,
 #stars2,
-#stars3 {
+#stars2-duplicate,
+#stars3,
+#stars3-duplicate {
  position: absolute;
  top: 0;
  left: 0;
@@ -56,6 +59,47 @@
  height: 3px;
  background: transparent;
  box-shadow: 100px 100px #fff, 400px 600px #fff, 900px 200px #fff;
+} */
+
+#stars,
+#stars-duplicate,
+#stars2,
+#stars2-duplicate,
+#stars3,
+#stars3-duplicate {
+ position: absolute;
+ top: 0;
+ left: 0;
+ background: transparent;
+ animation: animStar linear infinite;
+}
+
+#stars,
+#stars-duplicate {
+ width: 1px;
+ height: 1px;
+ animation-duration: 50s;
+}
+
+#stars2,
+#stars2-duplicate {
+ width: 2px;
+ height: 2px;
+ animation-duration: 100s;
+}
+
+#stars3,
+#stars3-duplicate {
+ width: 3px;
+ height: 3px;
+ animation-duration: 150s;
+}
+
+/* Duplicate layers start offscreen */
+#stars-duplicate,
+#stars2-duplicate,
+#stars3-duplicate {
+ top: 2000px;
 }
 
 @keyframes animStar {
