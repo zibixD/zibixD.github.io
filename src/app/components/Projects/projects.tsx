@@ -13,21 +13,23 @@ const Projects = () => {
       src="/plasek-site.jpg"
       alt="Strona plasek.pl"
       width={400}
-      height={230}
+      height={260}
      />
      <Typography>
       Moja pierwsza oficjalna strona wrzucona do webu. Utworzona na zlecenie
       Biura Rachunkowego.
      </Typography>
      <Box>
-      <Image src="/react-2.svg" alt="ikona ReactJS" width={50} height={50} />
-      <Image
-       src="/material-ui.svg"
-       alt="ikona Material UI"
-       width={50}
-       height={50}
-      />
-      <Button>Sprawdź śmiało!</Button>
+      <Box className={styles.tech_icons}>
+       <Image src="/react-2.svg" alt="ikona ReactJS" width={50} height={50} />
+       <Image
+        src="/material-ui.svg"
+        alt="ikona Material UI"
+        width={50}
+        height={50}
+       />
+      </Box>
+      <Button className={styles.button}>Sprawdź śmiało!</Button>
      </Box>
     </Box>
     <Box className={styles.project}>
@@ -35,21 +37,23 @@ const Projects = () => {
       src="/duraumat-site.jpg"
       alt="Strona duraumat.eu"
       width={400}
-      height={230}
+      height={260}
      />
      <Typography>
       Moja pierwsza strona komercyjna. Utworzyłem ją na zlecenie firmy Duraumat,
       która zajmuję się serwisem i wyposażaniem sprzętu rolniczego.
      </Typography>
      <Box>
-      <Image src="/next-js.svg" alt="ikona NextJS" width={50} height={50} />
-      <Image
-       src="/material-ui.svg"
-       alt="ikona Material UI"
-       width={50}
-       height={50}
-      />
-      <Button>Sprawdź śmiało!</Button>
+      <Box className={styles.tech_icons}>
+       <Image src="/next-js.svg" alt="ikona NextJS" width={50} height={50} />
+       <Image
+        src="/material-ui.svg"
+        alt="ikona Material UI"
+        width={50}
+        height={50}
+       />
+      </Box>
+      <Button className={styles.button}>Sprawdź śmiało!</Button>
      </Box>
     </Box>
    </Box>

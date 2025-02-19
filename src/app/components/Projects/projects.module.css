@@ -1,16 +1,14 @@
-.box {
- /* background-color: #20ff00; */
-}
-
 .box_projects {
  display: flex;
  justify-content: space-evenly;
 }
 
 .project {
- background-color: rgb(13, 138, 13);
+ background-color: transparent;
  width: 30%;
  text-align: center;
+ box-shadow: 0px 0px 64px 1px rgba(149, 165, 253, 0.603);
+ z-index: 5;
 }
 
 .project > img {
@@ -18,7 +16,31 @@
  padding-bottom: 3%;
 }
 
+/* .project > img:hover {
+ opacity: 0.2;
+
+} */
+
 .project > div {
  display: flex;
- justify-content: center;
+ align-items: center;
+ width: 100%;
+ padding: 1rem 0;
+}
+
+.tech_icons {
+ width: 50%;
+}
+
+.tech_icons > img {
+ padding: 0 5%;
+}
+
+.button {
+ font-size: 1.3rem;
+ font-weight: 900;
+}
+
+.button:hover {
+ background-color: white;
 }
