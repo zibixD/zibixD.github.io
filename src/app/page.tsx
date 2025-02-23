@@ -1,4 +1,5 @@
-import Background from "./components/Background/Background";
+import Background from "./components/Background/background";
+import Contact from "./components/Contact/contact";
 import Header from "./components/Header/header";
 import Landing from "./components/Landing/landing";
 import Projects from "./components/Projects/projects";
@@ -12,6 +13,7 @@ export default function Home() {
    <Landing />
    <Technologies />
    <Projects />
+   <Contact />
   </>
  );
 }
