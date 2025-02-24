@@ -10,7 +10,7 @@ import Technologies from "./components/Technologies/technologies";
 export default function Home() {
  return (
   <>
-   <Background></Background>
+   <Background />
    <Header />
    <Landing />
    {/* <Languages username="zibixD" /> */}

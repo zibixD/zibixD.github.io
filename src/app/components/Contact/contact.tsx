@@ -6,7 +6,7 @@ import styles from "./contact.module.css";
 
 const Contact = () => {
  return (
-  <Box>
+  <Box className={styles.box_contact} id="Kontakt">
    <Typography className="title">Porozmawiajmy</Typography>
    <Box className={styles.contacts_methods}>
     <Box>

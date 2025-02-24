@@ -1,5 +1,4 @@
 .menu {
- color: #ffffff;
  display: flex;
  justify-content: center;
  align-items: center;
@@ -11,4 +10,6 @@
 .links {
  margin: 0 3%;
  cursor: pointer;
+ text-decoration: none;
+ color: #ffffff;
 }

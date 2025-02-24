@@ -5,7 +5,7 @@ import styles from "./landing.module.css";
 
 const Landing = () => {
  return (
-  <Box className={styles.box}>
+  <Box className={styles.box} id="Strona główna">
    <Box className={styles.landing}>
     <Box>
      <Typography>Cześć, z tej strony</Typography>

@@ -5,7 +5,7 @@ import styles from "./projects.module.css";
 
 const Projects = () => {
  return (
-  <Box className={styles.box}>
+  <Box className={styles.box} id="Projekty">
    <Typography className="title">Moje zrealizowane projekty</Typography>
    <Box className={styles.box_projects}>
     <Box className={styles.project}>

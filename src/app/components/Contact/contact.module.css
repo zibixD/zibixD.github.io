@@ -1,3 +1,7 @@
+.box_contact {
+ padding: 30px;
+}
+
 .contacts_methods {
  display: flex;
  justify-content: space-evenly;
