@@ -5,11 +5,8 @@ import styles from "./technologies.module.css";
 
 const Technologies = () => {
  return (
-  <Box className={styles.box}>
-   <Typography className="title">
-    {/* Co używam do projektów */}
-    To już znam!
-   </Typography>
+  <Box className={styles.box_technologies}>
+   <Typography className="title">To już znam!</Typography>
    <Box className={styles.logos_box}>
     <Image
      className={styles.logos}

@@ -5,15 +5,18 @@
 
 .project {
  background-color: transparent;
+ /* background-color: rgba(149, 165, 253, 0.603); */
  width: 30%;
  text-align: center;
  box-shadow: 0px 0px 64px 1px rgba(149, 165, 253, 0.603);
  z-index: 5;
+ border-radius: 5px;
 }
 
 .project > img {
  width: 100%;
  padding-bottom: 3%;
+ border-radius: 5px;
 }
 
 /* .project > img:hover {
@@ -39,6 +42,11 @@
 .button {
  font-size: 1.3rem;
  font-weight: 900;
+}
+
+.button > a {
+ text-decoration: none;
+ color: #1976d2;
 }
 
 .button:hover {

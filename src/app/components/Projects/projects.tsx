@@ -21,15 +21,26 @@ const Projects = () => {
      </Typography>
      <Box>
       <Box className={styles.tech_icons}>
-       <Image src="/react-2.svg" alt="ikona ReactJS" width={50} height={50} />
+       <Image
+        src="/react-2.svg"
+        alt="ikona ReactJS"
+        width={50}
+        height={50}
+        title="ReactJS"
+       />
        <Image
         src="/material-ui.svg"
         alt="ikona Material UI"
         width={50}
         height={50}
+        title="Material UI"
        />
       </Box>
-      <Button className={styles.button}>Sprawdź śmiało!</Button>
+      <Button className={styles.button}>
+       <a href="https://plasek.pl" target="_blank">
+        Sprawdź śmiało!
+       </a>
+      </Button>
      </Box>
     </Box>
     <Box className={styles.project}>
@@ -45,15 +56,26 @@ const Projects = () => {
      </Typography>
      <Box>
       <Box className={styles.tech_icons}>
-       <Image src="/next-js.svg" alt="ikona NextJS" width={50} height={50} />
+       <Image
+        src="/next-js.svg"
+        alt="ikona NextJS"
+        width={50}
+        height={50}
+        title="NextJS"
+       />
        <Image
         src="/material-ui.svg"
         alt="ikona Material UI"
         width={50}
         height={50}
+        title="Material UI"
        />
       </Box>
-      <Button className={styles.button}>Sprawdź śmiało!</Button>
+      <Button className={styles.button}>
+       <a href="https://duraumat.eu" target="_blank">
+        Sprawdź śmiało!
+       </a>
+      </Button>
      </Box>
     </Box>
    </Box>
