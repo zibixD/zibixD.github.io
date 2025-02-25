@@ -7,4 +7,19 @@
 
  height: 200px;
  width: 100%;
+ display: flex;
+ justify-content: space-around;
+ align-items: center;
+}
+
+.box > p {
+ font-size: 2rem;
+ font-weight: 600;
+}
+
+.contact > a {
+ display: flex;
+ color: white;
+ text-decoration: none;
+ font-size: 1.5rem;
 }

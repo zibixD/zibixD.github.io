@@ -17,7 +17,7 @@ const Landing = () => {
     <Box className={styles.description}>
      <Typography>
       Mam 20 lat. Front-end&#39;em interesuję się od 2 lat. Szybko się uczę i
-      wdrażam do projektów.{" "}
+      wdrażam do projektów.
      </Typography>
      <Typography className={styles.desc_icons}>
       Do pisania aplikacji głównie używam
