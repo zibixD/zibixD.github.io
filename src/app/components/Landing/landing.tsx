@@ -22,7 +22,7 @@ const Landing = () => {
      <Typography className={styles.desc_icons}>
       Do pisania aplikacji głównie używam
       <Image
-       src="/react-logo.png"
+       src="/reactjs-logo.svg"
        alt="logo ReactJs"
        width={120}
        height={60}

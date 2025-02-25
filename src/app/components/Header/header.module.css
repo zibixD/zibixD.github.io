@@ -4,7 +4,32 @@
  align-items: center;
  height: 100px;
  font-size: 1.8rem;
- opacity: 10;
+ position: sticky;
+ top: 0;
+ z-index: 100;
+ background: linear-gradient(
+  90deg,
+  rgba(9, 10, 15, 1) 0%,
+  rgba(27, 39, 53, 0.4) 50%,
+  rgba(9, 10, 15, 1) 100%
+ );
+}
+
+.menu_scroll {
+ display: flex;
+ justify-content: center;
+ align-items: center;
+ height: 100px;
+ font-size: 1.8rem;
+ position: sticky;
+ top: 0;
+ z-index: 100;
+ background: linear-gradient(
+  90deg,
+  rgba(9, 10, 15, 1) 0%,
+  rgba(27, 39, 53, 1) 50%,
+  rgba(9, 10, 15, 1) 100%
+ );
 }
 
 .links {
