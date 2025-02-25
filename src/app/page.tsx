@@ -51,8 +51,8 @@ export default function Home() {
      <Image
       src="/rocket.png"
       alt="Powrót do góry strony"
-      height={60}
-      width={60}
+      height={50}
+      width={50}
      />
     </Fab>
    )}

@@ -15,7 +15,8 @@ const Projects = () => {
       width={400}
       height={260}
      />
-     <Typography>
+
+     <Typography className={styles.description}>
       Moja pierwsza oficjalna strona wrzucona do webu. Utworzona na zlecenie
       Biura Rachunkowego.
      </Typography>
@@ -50,7 +51,7 @@ const Projects = () => {
       width={400}
       height={260}
      />
-     <Typography>
+     <Typography className={styles.description}>
       Moja pierwsza strona komercyjna. Utworzyłem ją na zlecenie firmy Duraumat,
       która zajmuję się serwisem i wyposażaniem sprzętu rolniczego.
      </Typography>
@@ -74,6 +75,24 @@ const Projects = () => {
       <Button className={styles.button}>
        <a href="https://duraumat.eu" target="_blank">
         Sprawdź śmiało!
+       </a>
+      </Button>
+     </Box>
+    </Box>
+    <Box className={styles.github}>
+     <Image
+      src="/github-logo.png"
+      alt="Logo githuba"
+      width={200}
+      height={150}
+     ></Image>
+     <Box>
+      <Typography className={styles.description}>
+       Sprawdź moje pozostałe mniejsze projekty na githubie!
+      </Typography>
+      <Button className={styles.button}>
+       <a href="https://github.com/zibixD" target="_blank">
+        Zerknij śmiało
        </a>
       </Button>
      </Box>
