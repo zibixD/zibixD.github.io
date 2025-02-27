@@ -23,10 +23,11 @@
  display: flex;
  align-items: center;
  width: 100%;
+ padding: 20px 0;
 }
 
 .description {
- padding: 20px 5%;
+ padding: 0 5%;
 }
 
 .tech_icons {

@@ -39,12 +39,12 @@ export default function Home() {
    <Box>
     <Background />
     <Header />
-    <Landing />
+    {/* <Landing /> */}
     {/* <Languages username="zibixD" /> */}
-    <Technologies />
-    <Projects />
-    <Contact />
-    <Footer />
+    {/* <Technologies /> */}
+    {/* <Projects /> */}
+    {/* <Contact /> */}
+    {/* <Footer /> */}
    </Box>
    {showButton && (
     <Fab onClick={scrollToTopHandler} className={styles.scrollBtn}>

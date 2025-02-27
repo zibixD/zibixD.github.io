@@ -38,3 +38,20 @@
  text-decoration: none;
  color: #ffffff;
 }
+
+/* mobile css */
+
+.mobile_box {
+ background: linear-gradient(
+  90deg,
+  rgba(9, 10, 15, 1) 0%,
+  rgba(27, 39, 53, 1) 50%,
+  rgba(9, 10, 15, 1) 100%
+ );
+}
+
+.mobile_links {
+ color: white;
+ width: 100%;
+ text-align: center;
+}

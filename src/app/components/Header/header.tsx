@@ -1,7 +1,11 @@
+import { useIsMobile } from "@/app/hooks/useMobile";
 import Menu from "./menu";
+import MobileMenu from "./mobileMenu";
 
 const Header = () => {
- return <Menu></Menu>;
+ const isMobile = useIsMobile();
+
+ return <>{isMobile ? <MobileMenu /> : <Menu />}</>;
 };
 
 export default Header;
