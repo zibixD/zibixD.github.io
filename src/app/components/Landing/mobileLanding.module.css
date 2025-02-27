@@ -1,0 +1,15 @@
+.mobile_box {
+ padding: 5%;
+}
+
+.mobile_box > img {
+ padding: 20px 0;
+}
+
+/* .mobile_description {
+} */
+
+.mobile_desc_icons {
+ display: flex;
+ align-items: center;
+}

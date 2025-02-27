@@ -12,7 +12,7 @@ const Landing = () => {
      <Typography variant="h1" className={styles.name}>
       Adrian!
      </Typography>
-     <Typography>Początkujący programista na Froncie</Typography>
+     <Typography>Początkujący programista na Froncie.</Typography>
     </Box>
     <Box className={styles.description}>
      <Typography>
