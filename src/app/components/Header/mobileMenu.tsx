@@ -76,7 +76,7 @@ const MobileMenu = () => {
  );
 
  return (
-  <div>
+  <div className={styles.mobile_menu}>
    {(["top"] as const).map((anchor) => (
     <Fragment key={anchor}>
      <MenuRounded

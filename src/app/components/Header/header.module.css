@@ -50,6 +50,12 @@
  );
 }
 
+.mobile_menu {
+ display: flex;
+ justify-content: flex-end;
+ padding: 3%;
+}
+
 .mobile_links {
  color: white;
  width: 100%;

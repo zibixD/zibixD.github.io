@@ -32,6 +32,10 @@
  align-items: center;
 }
 
-.desc_icons > img {
- padding: 0 1%;
+.desc_icons > p {
+ font-size: 1.5rem;
 }
+
+/* .desc_icons > img {
+ margin: 0 2%;
+} */

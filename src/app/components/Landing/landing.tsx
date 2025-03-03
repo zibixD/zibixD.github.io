@@ -19,22 +19,23 @@ const Landing = () => {
       Mam 20 lat. Front-end&#39;em interesuję się od 2 lat. Szybko się uczę i
       wdrażam do projektów.
      </Typography>
-     <Typography className={styles.desc_icons}>
-      Do pisania aplikacji głównie używam
+     <Box className={styles.desc_icons}>
+      <Typography>Do pisania aplikacji głównie używam</Typography>
       <Image
        src="/reactjs-logo.svg"
        alt="logo ReactJs"
        width={120}
        height={60}
-      />{" "}
-      oraz
+      />
+      <Typography style={{ padding: "0 2% 0 1%" }}>oraz</Typography>
       <Image
+       className={styles.next_logo}
        src="/next-logo.png"
        alt="logo NextJs"
-       width={70}
-       height={40}
+       width={80}
+       height={50}
       ></Image>
-     </Typography>
+     </Box>
     </Box>
    </Box>
    <Image src="/landing-smile.jpg" alt="" width={400} height={400} />
