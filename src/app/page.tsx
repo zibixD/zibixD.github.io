@@ -24,10 +24,8 @@ export default function Home() {
   window.addEventListener("scroll", () => {
    if (window.scrollY > 100) {
     setShowButton(true);
-    console.log(showButton);
    } else {
     setShowButton(false);
-    console.log(showButton);
    }
   });
  }, []);
@@ -44,10 +42,9 @@ export default function Home() {
     <Background />
     <Header />
     {isMobile ? <MobileLanding /> : <Landing />}
-    {/* <Landing /> */}
     {/* <Languages username="zibixD" /> */}
-    {/* <Technologies /> */}
-    {/* <Projects /> */}
+    <Technologies />
+    <Projects />
     {/* <Contact /> */}
     {/* <Footer /> */}
    </Box>

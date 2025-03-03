@@ -8,13 +8,7 @@ const Technologies = () => {
   <Box className={styles.box_technologies} id="Technologie">
    <Typography className="title">To już znam!</Typography>
    <Box className={styles.logos_box}>
-    <Image
-     className={styles.logos}
-     src="/javascript.svg"
-     alt="logo JavaScript"
-     width={80}
-     height={80}
-    />
+    <Image src="/javascript.svg" alt="logo JavaScript" width={80} height={80} />
     <Image src="/typescript.svg" alt="logo TypeScript" width={80} height={80} />
     <Image src="/react-2.svg" alt="logo ReactJS" width={80} height={80} />
     <Image src="/redux.svg" alt="logo Redux" width={80} height={80} />

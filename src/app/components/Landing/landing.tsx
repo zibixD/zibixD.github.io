@@ -34,7 +34,7 @@ const Landing = () => {
        alt="logo NextJs"
        width={80}
        height={50}
-      ></Image>
+      />
      </Box>
     </Box>
    </Box>
