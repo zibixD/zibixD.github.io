@@ -38,7 +38,7 @@ const Menu = () => {
     to="Technologie"
     href="Technologie"
     smooth={true}
-    offset={-20}
+    offset={-80}
    >
     Technologie
    </Link>
@@ -47,7 +47,7 @@ const Menu = () => {
     to="Projekty"
     href="Projekty"
     smooth={true}
-    offset={-20}
+    offset={-80}
    >
     Moje rezalizacje
    </Link>
@@ -56,7 +56,7 @@ const Menu = () => {
     to="Kontakt"
     href="Kontakt"
     smooth={true}
-    offset={-20}
+    offset={-80}
    >
     Kontakt
    </Link>

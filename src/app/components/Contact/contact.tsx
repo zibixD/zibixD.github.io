@@ -15,7 +15,7 @@ const Contact = () => {
      </Typography>
      <ContactForm />
     </Box>
-    <Typography className={styles.main_text}>albo</Typography>
+    <Typography className={`${styles.main_text} ${styles.or}`}>albo</Typography>
     <Box>
      <Typography className={styles.main_text}>
       skontaktujmy się inaczej!

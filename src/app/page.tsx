@@ -45,8 +45,8 @@ export default function Home() {
     {/* <Languages username="zibixD" /> */}
     <Technologies />
     <Projects />
-    {/* <Contact /> */}
-    {/* <Footer /> */}
+    <Contact />
+    <Footer />
    </Box>
    {showButton && (
     <Fab onClick={scrollToTopHandler} className={styles.scrollBtn}>
