@@ -16,7 +16,6 @@ const Projects = () => {
        width={400}
        height={260}
       />
-
       <Typography className={styles.description}>
        Moja pierwsza oficjalna strona wrzucona do webu. Utworzona na zlecenie
        Biura Rachunkowego.
