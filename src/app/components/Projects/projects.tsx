@@ -7,90 +7,87 @@ const Projects = () => {
  return (
   <Box className={styles.box} id="Projekty">
    <Typography className="title">Moje zrealizowane projekty</Typography>
-   <Box className={styles.box_projects}>
-    <Box className={styles.project}>
-     <Image
-      src="/plasek-site.jpg"
-      alt="Strona plasek.pl"
-      width={400}
-      height={260}
-     />
+   <Box>
+    <Box className={styles.box_projects}>
+     <Box className={styles.project}>
+      <Image
+       src="/plasek-site.jpg"
+       alt="Strona plasek.pl"
+       width={400}
+       height={260}
+      />
 
-     <Typography className={styles.description}>
-      Moja pierwsza oficjalna strona wrzucona do webu. Utworzona na zlecenie
-      Biura Rachunkowego.
-     </Typography>
-     <Box>
-      <Box className={styles.tech_icons}>
-       <Image
-        src="/react-2.svg"
-        alt="ikona ReactJS"
-        width={50}
-        height={50}
-        title="ReactJS"
-       />
-       <Image
-        src="/material-ui.svg"
-        alt="ikona Material UI"
-        width={50}
-        height={50}
-        title="Material UI"
-       />
+      <Typography className={styles.description}>
+       Moja pierwsza oficjalna strona wrzucona do webu. Utworzona na zlecenie
+       Biura Rachunkowego.
+      </Typography>
+      <Box>
+       <Box className={styles.tech_icons}>
+        <Image
+         src="/react-2.svg"
+         alt="ikona ReactJS"
+         width={50}
+         height={50}
+         title="ReactJS"
+        />
+        <Image
+         src="/material-ui.svg"
+         alt="ikona Material UI"
+         width={50}
+         height={50}
+         title="Material UI"
+        />
+       </Box>
+       <Button className={styles.button}>
+        <a href="https://plasek.pl" target="_blank">
+         Sprawdź śmiało!
+        </a>
+       </Button>
       </Box>
-      <Button className={styles.button}>
-       <a href="https://plasek.pl" target="_blank">
-        Sprawdź śmiało!
-       </a>
-      </Button>
      </Box>
-    </Box>
-    <Box className={styles.project}>
-     <Image
-      src="/duraumat-site.jpg"
-      alt="Strona duraumat.eu"
-      width={400}
-      height={260}
-     />
-     <Typography className={styles.description}>
-      Moja pierwsza strona komercyjna. Utworzyłem ją na zlecenie firmy Duraumat,
-      która zajmuję się serwisem i wyposażaniem sprzętu rolniczego.
-     </Typography>
-     <Box>
-      <Box className={styles.tech_icons}>
-       <Image
-        src="/next-js.svg"
-        alt="ikona NextJS"
-        width={50}
-        height={50}
-        title="NextJS"
-       />
-       <Image
-        src="/material-ui.svg"
-        alt="ikona Material UI"
-        width={50}
-        height={50}
-        title="Material UI"
-       />
+     <Box className={styles.project}>
+      <Image
+       src="/duraumat-site.jpg"
+       alt="Strona duraumat.eu"
+       width={400}
+       height={260}
+      />
+      <Typography className={styles.description}>
+       Moja pierwsza strona komercyjna. Utworzyłem ją na zlecenie firmy
+       Duraumat, która zajmuję się serwisem i wyposażaniem sprzętu rolniczego.
+      </Typography>
+      <Box>
+       <Box className={styles.tech_icons}>
+        <Image
+         src="/next-js.svg"
+         alt="ikona NextJS"
+         width={50}
+         height={50}
+         title="NextJS"
+        />
+        <Image
+         src="/material-ui.svg"
+         alt="ikona Material UI"
+         width={50}
+         height={50}
+         title="Material UI"
+        />
+       </Box>
+       <Button className={styles.button}>
+        <a href="https://duraumat.eu" target="_blank">
+         Sprawdź śmiało!
+        </a>
+       </Button>
       </Box>
-      <Button className={styles.button}>
-       <a href="https://duraumat.eu" target="_blank">
-        Sprawdź śmiało!
-       </a>
-      </Button>
      </Box>
     </Box>
     <Box className={styles.github}>
-     <Image
-      src="/github-logo.png"
-      alt="Logo githuba"
-      width={200}
-      height={150}
-     ></Image>
+     <Image src="/github-logo.png" alt="Logo githuba" width={150} height={60} />
      <Box>
-      <Typography className={styles.description}>
+      <Typography className={styles.github_text}>
        Sprawdź moje pozostałe mniejsze projekty na githubie!
       </Typography>
-      <Button className={styles.button}>
+      <Button className={styles.github_button}>
        <a href="https://github.com/zibixD" target="_blank">
         Zerknij śmiało
        </a>
