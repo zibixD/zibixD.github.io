@@ -1,0 +1,7 @@
+.mobileButton {
+ position: fixed;
+ bottom: 150px;
+ right: 30px;
+ cursor: pointer;
+ z-index: 100;
+}

@@ -134,6 +134,11 @@
 }
 
 @media (max-width: 700px) {
+ .tech_icons > img {
+  width: 30px;
+  height: 30px;
+ }
+
  .github {
   display: flex;
   flex-direction: column;

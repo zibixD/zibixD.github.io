@@ -14,6 +14,7 @@ import Image from "next/image";
 
 import styles from "./page.module.css";
 import { useIsMobile } from "./hooks/useMobile";
+import MobileButton from "./components/UI/mobileButton";
 
 export default function Home() {
  const [showButton, setShowButton] = useState(false);
@@ -49,14 +50,18 @@ export default function Home() {
     <Footer />
    </Box>
    {showButton && (
-    <Fab onClick={scrollToTopHandler} className={styles.scrollBtn}>
-     <Image
-      src="/rocket.png"
-      alt="Powrót do góry strony"
-      height={50}
-      width={50}
-     />
-    </Fab>
+    <>
+     <MobileButton />
+
+     <Fab onClick={scrollToTopHandler} className={styles.scrollBtn}>
+      <Image
+       src="/rocket.png"
+       alt="Powrót do góry strony"
+       height={40}
+       width={40}
+      />
+     </Fab>
+    </>
    )}
   </>
  );
