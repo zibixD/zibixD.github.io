@@ -9,7 +9,7 @@ const MobileLanding = () => {
    <Typography>Cześć, z tej strony</Typography>
    <Typography variant="h1">Adrian!</Typography>
    <Typography>Początkujący programista na Froncie.</Typography>
-   <Image src="/landing-smile.jpg" alt="zdjecie" width={200} height={200} />
+   <Image src="/portfolio.jpg" alt="Moje zdjecie" width={200} height={200} />
    <Box className={styles.mobile_description}>
     <Typography>
      Mam 20 lat. Front-end&#39;em interesuję się od 2 lat. Szybko się uczę i

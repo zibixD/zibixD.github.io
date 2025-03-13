@@ -38,7 +38,7 @@ const Landing = () => {
      </Box>
     </Box>
    </Box>
-   <Image src="/landing-smile.jpg" alt="" width={400} height={400} />
+   <Image src="/portfolio.jpg" alt="Moje zdjęcie" width={400} height={400} />
   </Box>
  );
 };

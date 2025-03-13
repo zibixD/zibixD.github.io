@@ -13,3 +13,8 @@
  display: flex;
  align-items: center;
 }
+
+.mobile_box > image {
+ width: 100%;
+ height: auto;
+}

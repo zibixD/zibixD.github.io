@@ -1,11 +1,11 @@
 "use client";
 
-import { Box, Button, TextField } from "@mui/material";
+import { Box, Button, TextField, Alert } from "@mui/material";
 import { useState, useEffect } from "react";
 import { useForm, useWatch } from "react-hook-form";
+import Snackbar from "@mui/material/Snackbar";
 
 import styles from "./contact.module.css";
-import SnackbarUI from "./snackbar";
 
 export default function ContactForm() {
  const {
@@ -19,8 +19,9 @@ export default function ContactForm() {
   mode: "onTouched",
  });
  const [isSuccess, setIsSuccess] = useState(false);
- const [Message, setMessage] = useState("");
- const [snackbarOpen, setSnackbarOpen] = useState(false);
+ const [snackbarMessage, setSnackbarMessage] = useState("");
+ const [snackbarSeverity, setSnackbarSeverity] = useState("success");
+ const [openSnackbar, setOpenSnackbar] = useState(false);
 
  const userName = useWatch({
   control,
@@ -48,29 +49,23 @@ export default function ContactForm() {
     const json = await response.json();
     if (json.success) {
      setIsSuccess(true);
-     setMessage("Wiadomość została wysłana");
-     setSnackbarOpen(true);
+     setSnackbarMessage("E-mail został wysłany!");
+     setSnackbarSeverity("success");
      //  e.target.reset();
      console.log(json);
-     console.log(setSnackbarOpen);
      reset();
-    } else {
-     setIsSuccess(false);
-     setMessage("Coś poszło nie tak, spróbuj wysłać ponownie");
-     setSnackbarOpen(true);
     }
    })
    .catch((error) => {
     setIsSuccess(false);
-    setMessage("Błąd, sprawdź konsole aby zobaczyć informacje o błędzie");
-    setSnackbarOpen(true);
+    setSnackbarMessage("Wystąpił błąd podczas wysyłania e-maila.");
+    setSnackbarSeverity("error");
+
     console.log(error);
    });
+  setOpenSnackbar(true);
  };
 
- const closeSnackbarHandler = () => {
-  setSnackbarOpen(false);
- };
  return (
   <>
    <Box className={styles.contact_form}>
@@ -183,35 +178,25 @@ export default function ContactForm() {
        ) : (
         "Wyślij"
        )}
-
-       {/* {isSuccess ? <SnackbarUI></SnackbarUI> : "nie działa"} */}
       </Button>
+      <Snackbar
+       open={openSnackbar}
+       autoHideDuration={6000}
+       onClose={() => setOpenSnackbar(false)}
+       anchorOrigin={{ vertical: "bottom", horizontal: "right" }}
+      >
+       <Alert onClose={() => setOpenSnackbar(false)} severity="success">
+        {snackbarMessage}
+       </Alert>
+      </Snackbar>
      </form>
     )}
-    {isSubmitSuccessful && isSuccess && (
-     <>
-      <Box className="">
-       <SnackbarUI
-        open={snackbarOpen}
-        close={closeSnackbarHandler}
-        message={Message}
-        severity={isSuccess ? "success" : "error"}
-       ></SnackbarUI>
-       <h3 className="py-5 text-2xl text-green-500">Success</h3>
-       <p className="text-gray-700 md:px-3">{Message}</p>
-       <Button className={styles.button} onClick={() => reset()}>
-        Powróć do formularza
-       </Button>
-      </Box>
-     </>
-    )}
-
     {isSubmitSuccessful && !isSuccess && (
      <Box>
       <h3 className="text-2xl text-red-400 py-7">
        Oops, Something went wrong!
       </h3>
-      <p className="text-gray-300 md:px-3">{Message}</p>
+      <p className="text-gray-300 md:px-3"></p>
       <button className="mt-5 focus:outline-none" onClick={() => reset()}>
        Try Again
       </button>

@@ -49,10 +49,9 @@ export default function Home() {
     <Contact />
     <Footer />
    </Box>
+   {isMobile && <MobileButton />}
    {showButton && (
     <>
-     <MobileButton />
-
      <Fab onClick={scrollToTopHandler} className={styles.scrollBtn}>
       <Image
        src="/rocket.png"
