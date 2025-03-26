@@ -20,7 +20,7 @@ export default function ContactForm() {
  });
  const [isSuccess, setIsSuccess] = useState(false);
  const [snackbarMessage, setSnackbarMessage] = useState("");
- const [snackbarSeverity, setSnackbarSeverity] = useState("success");
+ //  const [snackbarSeverity, setSnackbarSeverity] = useState("success");
  const [openSnackbar, setOpenSnackbar] = useState(false);
 
  const userName = useWatch({
@@ -50,7 +50,7 @@ export default function ContactForm() {
     if (json.success) {
      setIsSuccess(true);
      setSnackbarMessage("E-mail został wysłany!");
-     setSnackbarSeverity("success");
+     //  setSnackbarSeverity("success");
      //  e.target.reset();
      console.log(json);
      reset();
@@ -59,7 +59,7 @@ export default function ContactForm() {
    .catch((error) => {
     setIsSuccess(false);
     setSnackbarMessage("Wystąpił błąd podczas wysyłania e-maila.");
-    setSnackbarSeverity("error");
+    // setSnackbarSeverity("error");
 
     console.log(error);
    });

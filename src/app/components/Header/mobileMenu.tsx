@@ -43,7 +43,7 @@ const MobileMenu = () => {
    component="div"
    sx={{ width: anchor === "top" ? "100%" : undefined }}
    role="presentation"
-   onClick={(event) => toggleDrawer(anchor, false)}
+   onClick={() => toggleDrawer(anchor, false)}
    onKeyDown={toggleDrawer(anchor, false)}
   >
    <List>
@@ -87,8 +87,8 @@ const MobileMenu = () => {
      <SwipeableDrawer
       anchor={anchor}
       open={state[anchor]}
-      onClose={(event) => toggleDrawer(anchor, false)}
-      onOpen={(event) => toggleDrawer(anchor, true)}
+      onClose={() => toggleDrawer(anchor, false)}
+      onOpen={() => toggleDrawer(anchor, true)}
      >
       {list(anchor)}
      </SwipeableDrawer>

@@ -4,7 +4,7 @@ import {
  Instagram,
  LocalPhone,
 } from "@mui/icons-material";
-import { Box, SpeedDial, SpeedDialAction, SpeedDialIcon } from "@mui/material";
+import { SpeedDial, SpeedDialAction, SpeedDialIcon } from "@mui/material";
 
 import styles from "./mobileButton.module.css";
 
@@ -31,14 +31,17 @@ const MobileButton = () => {
    icon={<SpeedDialIcon />}
   >
    {actions.map((action) => (
-    <SpeedDialAction
+    <a
      key={action.name}
-     icon={action.icon}
-     tooltipTitle={action.name}
-     component="a"
      href={action.link}
      target="_blank"
-    ></SpeedDialAction>
+     style={{ textDecoration: "none", color: "inherit" }}
+    >
+     <SpeedDialAction
+      tooltipTitle={action.name}
+      icon={action.icon}
+     ></SpeedDialAction>
+    </a>
    ))}
   </SpeedDial>
  );
