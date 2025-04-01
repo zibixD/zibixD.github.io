@@ -43,7 +43,6 @@ export default function Home() {
     <Background />
     <Header />
     {isMobile ? <MobileLanding /> : <Landing />}
-    {/* <Languages username="zibixD" /> */}
     <Technologies />
     <Projects />
     <Contact />
