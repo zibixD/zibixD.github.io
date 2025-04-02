@@ -6,7 +6,9 @@ import styles from "./projects.module.css";
 const Projects = () => {
  return (
   <Box className={styles.box} id="Projekty">
-   <Typography className="title">Moje zrealizowane projekty</Typography>
+   <Typography className="title" sx={{ fontSize: "2.5rem" }}>
+    Moje zrealizowane projekty
+   </Typography>
    <Box>
     <Box className={styles.box_projects}>
      <Box className={styles.project}>
@@ -37,7 +39,10 @@ const Projects = () => {
          title="Material UI"
         />
        </Box>
-       <Button className={styles.button}>
+       <Button
+        className={styles.button}
+        sx={{ fontSize: "1.3rem", fontWeight: 900 }}
+       >
         <a href="https://plasek.pl" target="_blank">
          Sprawdź śmiało!
         </a>
@@ -72,7 +77,10 @@ const Projects = () => {
          title="Material UI"
         />
        </Box>
-       <Button className={styles.button}>
+       <Button
+        className={styles.button}
+        sx={{ fontSize: "1.3rem", fontWeight: 900 }}
+       >
         <a href="https://duraumat.eu" target="_blank">
          Sprawdź śmiało!
         </a>
@@ -86,7 +94,10 @@ const Projects = () => {
       <Typography className={styles.github_text}>
        Sprawdź moje pozostałe mniejsze projekty na githubie!
       </Typography>
-      <Button className={styles.github_button}>
+      <Button
+       className={styles.github_button}
+       sx={{ fontSize: "1.1rem", fontWeight: 900 }}
+      >
        <a href="https://github.com/zibixD" target="_blank">
         Zerknij śmiało
        </a>

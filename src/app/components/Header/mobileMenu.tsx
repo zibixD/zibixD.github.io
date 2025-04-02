@@ -53,7 +53,7 @@ const MobileMenu = () => {
        to={text}
        key={text}
        smooth={true}
-       href={text}
+       href={`/${text}`}
        offset={-20}
        style={{ textDecoration: "none" }}
       >

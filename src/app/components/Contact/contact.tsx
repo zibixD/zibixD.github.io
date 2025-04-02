@@ -7,17 +7,30 @@ import styles from "./contact.module.css";
 const Contact = () => {
  return (
   <Box className={styles.box_contact} id="Kontakt">
-   <Typography className="title">Porozmawiajmy</Typography>
+   <Typography className="title" sx={{ fontSize: "2.5rem" }}>
+    Porozmawiajmy
+   </Typography>
    <Box className={styles.contacts_methods}>
-    <Box>
-     <Typography className={styles.main_text}>
+    <Box className={styles.sections}>
+     <Typography
+      className={styles.main_text}
+      sx={{ fontSize: "1.5rem", margin: "0 auto" }}
+     >
       Napisz email poprzez formularz
      </Typography>
      <ContactForm />
     </Box>
-    <Typography className={`${styles.main_text} ${styles.or}`}>albo</Typography>
-    <Box>
-     <Typography className={styles.main_text}>
+    <Typography
+     className={`${styles.main_text} ${styles.or}`}
+     sx={{ fontSize: "1.5rem" }}
+    >
+     albo
+    </Typography>
+    <Box className={styles.sections}>
+     <Typography
+      className={styles.main_text}
+      sx={{ fontSize: "1.5rem", margin: "0 auto" }}
+     >
       skontaktujmy się inaczej!
      </Typography>
      <Socials />

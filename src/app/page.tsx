@@ -12,7 +12,6 @@ import Technologies from "./components/Technologies/technologies";
 import { Box, Fab } from "@mui/material";
 import Image from "next/image";
 
-import styles from "./page.module.css";
 import { useIsMobile } from "./hooks/useMobile";
 import MobileButton from "./components/UI/mobileButton";
 
@@ -51,7 +50,18 @@ export default function Home() {
    {isMobile && <MobileButton />}
    {showButton && (
     <>
-     <Fab onClick={scrollToTopHandler} className={styles.scrollBtn}>
+     <Fab
+      onClick={scrollToTopHandler}
+      style={{
+       position: "fixed",
+       bottom: "30px",
+       right: "30px",
+       height: "56px",
+       width: "56px",
+       cursor: "pointer",
+       border: "black 1px solid",
+      }}
+     >
       <Image
        src="/rocket.png"
        alt="Powrót do góry strony"

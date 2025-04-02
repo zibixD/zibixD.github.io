@@ -4,8 +4,14 @@
 
 .contacts_methods {
  display: flex;
+
  justify-content: space-evenly;
- width: 100%;
+ gap: 3rem;
+ /* width: 100%; */
+}
+.sections {
+ /* flex: 1; */
+ text-align: center;
 }
 
 .contact_form {

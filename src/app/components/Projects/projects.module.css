@@ -56,11 +56,6 @@
  padding: 0 5%;
 }
 
-.button {
- font-size: 1.3rem;
- font-weight: 900;
-}
-
 .button > a {
  text-decoration: none;
  color: #1976d2;
@@ -102,10 +97,6 @@
  padding: 2%;
 }
 
-.github_button {
- font-size: 1.1rem;
- font-weight: 900;
-}
 .github_button > a {
  text-decoration: none;
  color: #1976d2;

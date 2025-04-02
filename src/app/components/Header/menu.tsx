@@ -27,7 +27,7 @@ const Menu = () => {
    <Link
     className={styles.links}
     to="Strona główna"
-    href="Strona główna"
+    href="/#Strona główna"
     smooth={true}
     offset={-100}
    >
@@ -36,7 +36,7 @@ const Menu = () => {
    <Link
     className={styles.links}
     to="Technologie"
-    href="Technologie"
+    href="/#Technologie"
     smooth={true}
     offset={-80}
    >
@@ -45,7 +45,7 @@ const Menu = () => {
    <Link
     className={styles.links}
     to="Projekty"
-    href="Projekty"
+    href="/#Projekty"
     smooth={true}
     offset={-80}
    >
@@ -54,7 +54,7 @@ const Menu = () => {
    <Link
     className={styles.links}
     to="Kontakt"
-    href="Kontakt"
+    href="/#Kontakt"
     smooth={true}
     offset={-80}
    >

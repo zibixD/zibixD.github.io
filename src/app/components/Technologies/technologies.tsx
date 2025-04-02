@@ -6,7 +6,9 @@ import styles from "./technologies.module.css";
 const Technologies = () => {
  return (
   <Box className={styles.box_technologies} id="Technologie">
-   <Typography className="title">To już znam!</Typography>
+   <Typography className="title" sx={{ fontSize: "2.5rem" }}>
+    To już znam!
+   </Typography>
    <Box className={styles.logos_box}>
     <Image src="/javascript.svg" alt="logo JavaScript" width={80} height={80} />
     <Image src="/typescript.svg" alt="logo TypeScript" width={80} height={80} />

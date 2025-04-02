@@ -18,7 +18,7 @@ export default function ContactForm() {
  } = useForm({
   mode: "onTouched",
  });
- const [isSuccess, setIsSuccess] = useState(false);
+ //  const [isSuccess, setIsSuccess] = useState(false);
  const [snackbarMessage, setSnackbarMessage] = useState("");
  //  const [snackbarSeverity, setSnackbarSeverity] = useState("success");
  const [openSnackbar, setOpenSnackbar] = useState(false);
@@ -48,7 +48,7 @@ export default function ContactForm() {
    .then(async (response) => {
     const json = await response.json();
     if (json.success) {
-     setIsSuccess(true);
+     //  setIsSuccess(true);
      setSnackbarMessage("E-mail został wysłany!");
      //  setSnackbarSeverity("success");
      //  e.target.reset();
@@ -57,7 +57,7 @@ export default function ContactForm() {
     }
    })
    .catch((error) => {
-    setIsSuccess(false);
+    // setIsSuccess(false);
     setSnackbarMessage("Wystąpił błąd podczas wysyłania e-maila.");
     // setSnackbarSeverity("error");
 
@@ -145,40 +145,23 @@ export default function ContactForm() {
         className={styles.input}
         {...register("message", { required: "Enter your Message" })}
        />
-       {/* {errors.message && (
-        <Box className="mt-1 text-red-600">
-         {" "}
-         <small>{errors.message.message}</small>
-        </Box>
-       )} */}
       </Box>
+      {isSubmitting ? (
+       <Button
+        loading
+        loadingPosition="start"
+        type="submit"
+        sx={{ height: 40 }}
+        className={styles.submit_button}
+       >
+        Ładowanie
+       </Button>
+      ) : (
+       <Button type="submit" className={styles.submit_button}>
+        Wyślij
+       </Button>
+      )}
 
-      <Button type="submit" className={styles.submit_button}>
-       {isSubmitting ? (
-        <svg
-         className="w-5 h-5 mx-auto text-white animate-spin"
-         xmlns="http://www.w3.org/2000/svg"
-         fill="none"
-         viewBox="0 0 24 24"
-        >
-         <circle
-          className="opacity-25"
-          cx="12"
-          cy="12"
-          r="10"
-          stroke="currentColor"
-          strokeWidth="4"
-         ></circle>
-         <path
-          className="opacity-75"
-          fill="currentColor"
-          d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"
-         ></path>
-        </svg>
-       ) : (
-        "Wyślij"
-       )}
-      </Button>
       <Snackbar
        open={openSnackbar}
        autoHideDuration={6000}
@@ -190,17 +173,6 @@ export default function ContactForm() {
        </Alert>
       </Snackbar>
      </form>
-    )}
-    {isSubmitSuccessful && !isSuccess && (
-     <Box>
-      <h3 className="text-2xl text-red-400 py-7">
-       Oops, Something went wrong!
-      </h3>
-      <p className="text-gray-300 md:px-3"></p>
-      <button className="mt-5 focus:outline-none" onClick={() => reset()}>
-       Try Again
-      </button>
-     </Box>
     )}
    </Box>
   </>

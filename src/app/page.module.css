@@ -4,17 +4,6 @@
  --shadows-big: 0px 0px white;
 } */
 
-.scrollBtn {
- position: fixed;
- bottom: 30px;
- right: 30px;
- height: 56px;
- width: 56px;
- cursor: pointer;
- background-image: url("/rocket-launch.png");
- border: rgb(0, 0, 0) 1px solid;
-}
-
 .stars,
 .stars2,
 .stars3 {
