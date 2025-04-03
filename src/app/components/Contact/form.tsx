@@ -13,6 +13,14 @@ const inputStyle = {
  backgroundColor: "white",
 };
 
+const buttonStyle = {
+ width: "100%",
+ fontSize: "1rem",
+ fontWeight: 600,
+ backgroundColor: "white",
+ margin: "5% 0",
+};
+
 export default function ContactForm() {
  const {
   register,
@@ -144,27 +152,12 @@ export default function ContactForm() {
         loading
         loadingPosition="start"
         type="submit"
-        sx={{
-         width: "100%",
-         fontSize: "1rem",
-         fontWeight: 600,
-         backgroundColor: "white",
-         margin: "5% 0",
-        }}
+        style={buttonStyle}
        >
         Ładowanie
        </Button>
       ) : (
-       <Button
-        type="submit"
-        sx={{
-         width: "100%",
-         fontSize: "1rem",
-         fontWeight: 600,
-         backgroundColor: "white",
-         margin: "5% 0",
-        }}
-       >
+       <Button type="submit" style={buttonStyle}>
         Wyślij
        </Button>
       )}

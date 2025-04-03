@@ -31,17 +31,12 @@ const MobileButton = () => {
    icon={<SpeedDialIcon />}
   >
    {actions.map((action) => (
-    <a
+    <SpeedDialAction
+     tooltipTitle={action.name}
+     icon={action.icon}
      key={action.name}
-     href={action.link}
-     target="_blank"
-     style={{ textDecoration: "none", color: "inherit" }}
-    >
-     <SpeedDialAction
-      tooltipTitle={action.name}
-      icon={action.icon}
-     ></SpeedDialAction>
-    </a>
+     onClick={() => window.open(action.link, "_blank")}
+    ></SpeedDialAction>
    ))}
   </SpeedDial>
  );
