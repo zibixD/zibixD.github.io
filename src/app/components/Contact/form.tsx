@@ -7,6 +7,12 @@ import Snackbar from "@mui/material/Snackbar";
 
 import styles from "./contact.module.css";
 
+const inputStyle = {
+ margin: "5% 0",
+ width: "100%",
+ backgroundColor: "white",
+};
+
 export default function ContactForm() {
  const {
   register,
@@ -96,23 +102,15 @@ export default function ContactForm() {
         type="text"
         placeholder="Imię"
         autoComplete="false"
-        className={styles.input}
+        style={inputStyle}
         {...register("name", {
          required: "Full name is required",
          maxLength: 80,
         })}
        />
-       {/* {errors.name && (
-        <Box className="mt-1 text-red-600">
-         <small>{errors.name.message}</small>
-        </Box>
-       )} */}
       </Box>
 
       <Box className="">
-       {/* <label htmlFor="email_address" className="sr-only">
-        Email Address
-       </label> */}
        <TextField
         label="Twój adress email"
         id="email_address"
@@ -120,7 +118,7 @@ export default function ContactForm() {
         placeholder="Email Address"
         // name="email"
         autoComplete="false"
-        className={styles.input}
+        style={inputStyle}
         {...register("email", {
          required: "Enter your email",
          pattern: {
@@ -129,11 +127,6 @@ export default function ContactForm() {
          },
         })}
        />
-       {/* {errors.email && (
-        <Box className="mt-1 text-red-600">
-         <small>{errors.email.message}</small>
-        </Box>
-       )} */}
       </Box>
 
       <Box className="mb-3">
@@ -142,7 +135,7 @@ export default function ContactForm() {
         multiline
         rows={3}
         // name="message"
-        className={styles.input}
+        style={inputStyle}
         {...register("message", { required: "Enter your Message" })}
        />
       </Box>
@@ -151,13 +144,27 @@ export default function ContactForm() {
         loading
         loadingPosition="start"
         type="submit"
-        sx={{ height: 40 }}
-        className={styles.submit_button}
+        sx={{
+         width: "100%",
+         fontSize: "1rem",
+         fontWeight: 600,
+         backgroundColor: "white",
+         margin: "5% 0",
+        }}
        >
         Ładowanie
        </Button>
       ) : (
-       <Button type="submit" className={styles.submit_button}>
+       <Button
+        type="submit"
+        sx={{
+         width: "100%",
+         fontSize: "1rem",
+         fontWeight: 600,
+         backgroundColor: "white",
+         margin: "5% 0",
+        }}
+       >
         Wyślij
        </Button>
       )}
