@@ -1,4 +1,4 @@
-import { useIsMobile } from "@/app/hooks/useMobile";
+import { useIsMobile } from "src/app/hooks/useMobile";
 import Menu from "./menu";
 import MobileMenu from "./mobileMenu";
 

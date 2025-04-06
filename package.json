@@ -6,7 +6,9 @@
   "dev": "next dev",
   "build": "next build",
   "start": "next start",
-  "lint": "next lint"
+  "lint": "next lint",
+  "deploy": "gh-pages -d out",
+  "predeploy": "npm run build && echo 'zibixd.github.io' > out/CNAME "
  },
  "dependencies": {
   "@emotion/react": "^11.14.0",
@@ -14,12 +16,13 @@
   "@mui/icons-material": "^6.4.5",
   "@mui/material": "^6.4.3",
   "chart.js": "^4.4.8",
-  "next": "15.1.6",
+  "next": "^15.2.4",
   "react": "^19.0.0",
   "react-chartjs-2": "^5.3.0",
   "react-dom": "^19.0.0",
   "react-hook-form": "^7.54.2",
-  "react-scroll": "^1.9.2"
+  "react-scroll": "^1.9.2",
+  "webpack": "^5.98.0"
  },
  "devDependencies": {
   "@eslint/eslintrc": "^3",
@@ -29,6 +32,7 @@
   "@types/react-scroll": "^1.8.10",
   "eslint": "^9",
   "eslint-config-next": "15.1.6",
+  "gh-pages": "^6.3.0",
   "typescript": "^5"
  }
 }

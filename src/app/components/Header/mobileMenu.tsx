@@ -22,16 +22,24 @@ const MobileMenu = () => {
  const toggleDrawer =
   (anchor: Anchor, open: boolean) =>
   (event: React.KeyboardEvent | React.MouseEvent<SVGSVGElement>) => {
-   if (event.type === "keydown" && "key" in event) {
-    const keyboardEvent = event as React.KeyboardEvent;
-    if (keyboardEvent.key === "Tab" || keyboardEvent.key === "Shift") {
-     return;
-    }
-   }
+   //    if (event.type === "keydown" && "key" in event) {
+   //     const keyboardEvent = event as React.KeyboardEvent;
+   //     if (keyboardEvent.key === "Tab" || keyboardEvent.key === "Shift") {
+   //      return;
+   //     }
+   //    }
 
-   if (event.type === "click") {
-    const mouseEvent = event as React.MouseEvent<SVGSVGElement>;
-    console.log(mouseEvent);
+   //    if (event.type === "click") {
+   //     const mouseEvent = event as React.MouseEvent<SVGSVGElement>;
+   //     console.log(mouseEvent);
+   //    }
+   if (
+    event &&
+    event.type === "keydown" &&
+    "key" in event &&
+    (event.key === "Tab" || event.key === "Shift")
+   ) {
+    return;
    }
 
    setState({ ...state, [anchor]: open });
@@ -44,33 +52,31 @@ const MobileMenu = () => {
    sx={{ width: anchor === "top" ? "100%" : undefined }}
    role="presentation"
    onClick={() => toggleDrawer(anchor, false)}
-   onKeyDown={toggleDrawer(anchor, false)}
+   onKeyDown={() => toggleDrawer(anchor, false)}
   >
    <List>
-    {["Strona główna", "Technologie", "Moje realizacje", "Kontakt"].map(
-     (text) => (
-      <Link
-       to={text}
-       key={text}
-       smooth={true}
-       href={`/${text}`}
-       offset={-20}
-       style={{ textDecoration: "none" }}
-      >
-       <ListItemButton>
-        <ListItemText>
-         <Typography
-          variant="h6"
-          sx={{ textDecorationColor: "transparent" }}
-          className={styles.mobile_links}
-         >
-          {text}
-         </Typography>
-        </ListItemText>
-       </ListItemButton>
-      </Link>
-     )
-    )}
+    {["Strona główna", "Technologie", "Projekty", "Kontakt"].map((text) => (
+     <Link
+      to={text}
+      key={text}
+      smooth={true}
+      href={`/#${text}`}
+      offset={-240}
+      style={{ textDecoration: "none" }}
+     >
+      <ListItemButton>
+       <ListItemText>
+        <Typography
+         variant="h6"
+         sx={{ textDecorationColor: "transparent" }}
+         className={styles.mobile_links}
+        >
+         {text}
+        </Typography>
+       </ListItemText>
+      </ListItemButton>
+     </Link>
+    ))}
    </List>
   </Box>
  );
@@ -87,8 +93,8 @@ const MobileMenu = () => {
      <SwipeableDrawer
       anchor={anchor}
       open={state[anchor]}
-      onClose={() => toggleDrawer(anchor, false)}
-      onOpen={() => toggleDrawer(anchor, true)}
+      onClose={toggleDrawer(anchor, false)}
+      onOpen={toggleDrawer(anchor, true)}
      >
       {list(anchor)}
      </SwipeableDrawer>

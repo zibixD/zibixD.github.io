@@ -13,6 +13,9 @@ export default function RootLayout({
 }>) {
  return (
   <html lang="en">
+   <head>
+    <link rel="stylesheet" href={`./globals.css?v=${Date.now()}`} />
+   </head>
    <body>{children}</body>
   </html>
  );
