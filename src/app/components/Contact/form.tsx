@@ -1,6 +1,14 @@
 "use client";
 
-import { Box, Button, TextField, Alert, styled } from "@mui/material";
+import {
+ Alert,
+ AlertColor,
+ Box,
+ Button,
+ TextField,
+ Typography,
+ styled,
+} from "@mui/material";
 import { useState, useEffect } from "react";
 import { useForm, useWatch } from "react-hook-form";
 import Snackbar from "@mui/material/Snackbar";
@@ -41,7 +49,8 @@ export default function ContactForm() {
  });
  //  const [isSuccess, setIsSuccess] = useState(false);
  const [snackbarMessage, setSnackbarMessage] = useState("");
- //  const [snackbarSeverity, setSnackbarSeverity] = useState("success");
+ const [snackbarSeverity, setSnackbarSeverity] =
+  useState<AlertColor>("success");
  const [openSnackbar, setOpenSnackbar] = useState(false);
 
  const userName = useWatch({
@@ -69,28 +78,29 @@ export default function ContactForm() {
    .then(async (response) => {
     const json = await response.json();
     if (json.success) {
-     //  setIsSuccess(true);
      setSnackbarMessage("E-mail został wysłany!");
-     //  setSnackbarSeverity("success");
-     //  e.target.reset();
-     console.log(json);
+     console.log("działa");
+     setSnackbarSeverity("success");
      reset();
+    } else {
+     setSnackbarMessage("Coś poszło nie tak.");
+     console.log(" chuja działa");
+     setSnackbarSeverity("error");
     }
+    setOpenSnackbar(true);
    })
    .catch((error) => {
-    // setIsSuccess(false);
     setSnackbarMessage("Wystąpił błąd podczas wysyłania e-maila.");
-    // setSnackbarSeverity("error");
-
+    setSnackbarSeverity("error");
+    setOpenSnackbar(true);
     console.log(error);
    });
-  setOpenSnackbar(true);
  };
 
  return (
   <>
    <Box className={styles.contact_form}>
-    {!isSubmitSuccessful && (
+    {!isSubmitSuccessful ? (
      <form onSubmit={handleSubmit(onSubmit)}>
       <input
        type="hidden"
@@ -168,20 +178,21 @@ export default function ContactForm() {
         Wyślij
        </Button>
       )}
-
-      <Snackbar
-       open={openSnackbar}
-       autoHideDuration={6000}
-       onClose={() => setOpenSnackbar(false)}
-       anchorOrigin={{ vertical: "bottom", horizontal: "right" }}
-      >
-       <Alert onClose={() => setOpenSnackbar(false)} severity="success">
-        {snackbarMessage}
-       </Alert>
-      </Snackbar>
      </form>
+    ) : (
+     <Typography className={styles.sendInfo}>E-mail został wysłany!</Typography>
     )}
    </Box>
+   <Snackbar
+    open={openSnackbar}
+    autoHideDuration={5000}
+    onClose={() => setOpenSnackbar(false)}
+    anchorOrigin={{ vertical: "bottom", horizontal: "left" }}
+   >
+    <Alert onClose={() => setOpenSnackbar(false)} severity={snackbarSeverity}>
+     {snackbarMessage}
+    </Alert>
+   </Snackbar>
   </>
  );
 }

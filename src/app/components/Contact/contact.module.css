@@ -4,10 +4,16 @@
 
 .contacts_methods {
  display: flex;
-
  justify-content: space-evenly;
  gap: 3rem;
 }
+
+.sendInfo {
+ text-align: center;
+ width: 100%;
+ padding: 50px;
+}
+
 .sections {
  text-align: center;
 }
