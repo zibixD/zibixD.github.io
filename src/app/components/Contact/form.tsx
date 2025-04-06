@@ -1,6 +1,6 @@
 "use client";
 
-import { Box, Button, TextField, Alert } from "@mui/material";
+import { Box, Button, TextField, Alert, styled } from "@mui/material";
 import { useState, useEffect } from "react";
 import { useForm, useWatch } from "react-hook-form";
 import Snackbar from "@mui/material/Snackbar";
@@ -9,17 +9,24 @@ import styles from "./contact.module.css";
 
 const inputStyle = {
  margin: "5% 0",
- width: "100%",
+ width: "90%",
  backgroundColor: "white",
+ borderRadius: "0px",
 };
 
 const buttonStyle = {
- width: "100%",
+ width: "90%",
  fontSize: "1rem",
  fontWeight: 600,
  backgroundColor: "white",
  margin: "5% 0",
 };
+
+const CustomTextFieldCss = styled(TextField)({
+ "& .MuiInputBase-root": {
+  borderRadius: "0px",
+ },
+});
 
 export default function ContactForm() {
  const {
@@ -105,7 +112,7 @@ export default function ContactForm() {
       ></input>
 
       <Box className="">
-       <TextField
+       <CustomTextFieldCss
         label="Twoje imię"
         type="text"
         placeholder="Imię"
@@ -119,7 +126,7 @@ export default function ContactForm() {
       </Box>
 
       <Box className="">
-       <TextField
+       <CustomTextFieldCss
         label="Twój adress email"
         id="email_address"
         type="email"
@@ -138,7 +145,7 @@ export default function ContactForm() {
       </Box>
 
       <Box className="mb-3">
-       <TextField
+       <CustomTextFieldCss
         label="Twoja wiadomość"
         multiline
         rows={3}
