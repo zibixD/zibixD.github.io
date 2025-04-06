@@ -125,6 +125,17 @@
 }
 
 @media (max-width: 700px) {
+ .box_projects {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+ }
+
+ .project {
+  width: 80%;
+  margin: 10px 0px;
+ }
+
  .tech_icons > img {
   width: 30px;
   height: 30px;
@@ -133,8 +144,9 @@
  .github {
   display: flex;
   flex-direction: column;
-  width: 70%;
-  padding: 1%;
+  width: 80%;
+  /* padding: 1%; */
+  margin: 10px 0;
  }
 
  .github > img {

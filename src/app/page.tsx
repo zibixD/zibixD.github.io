@@ -1,7 +1,7 @@
 "use client";
 
 import { useEffect, useState } from "react";
-import Background from "./components/Background/background";
+import Background from "./components/Background/Background";
 import Contact from "./components/Contact/contact";
 import Footer from "./components/Footer/footer";
 import Header from "./components/Header/header";
