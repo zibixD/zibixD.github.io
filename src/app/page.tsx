@@ -55,7 +55,7 @@ export default function Home() {
       style={{
        position: "fixed",
        bottom: "30px",
-       right: "30px",
+       right: "15px",
        height: "56px",
        width: "56px",
        cursor: "pointer",
